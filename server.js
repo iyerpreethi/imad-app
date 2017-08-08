@@ -45,10 +45,10 @@ var articles= {
     }
 };
 
-function createtemplate (input) {
-    var title= input.title;
-    var date= input.date;
-    var content= input.content;
+function createtemplate (data) {
+    var title= data.title;
+    var date= data.date;
+    var content= data.content;
     var htmltemplate= `
 <html>
   <head>
