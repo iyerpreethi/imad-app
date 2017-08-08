@@ -20,3 +20,9 @@ body {
     height: 200px;
 }
 
+.container {
+display: block;
+margin: 50;
+padding-top: 100;
+color: #FFC107
+}
