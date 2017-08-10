@@ -4,6 +4,6 @@ var element= document.getElementById("main-text");
 element.innerHTML= ("New Value");
 
 var element= document.getElementById("madi");
-element.onclick= function () {
+element.click= function () {
     element.style.marginLeft= '100 px';
 };
