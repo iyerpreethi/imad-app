@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles= {
-    articleone: {
+    'article-one': {
     title:'article-one',
     date: '8th Aug 2017',
     content: `
@@ -27,7 +27,7 @@ var articles= {
     </p>`
     },
     
-    articletwo: {
+    'article-two': {
     title:'article-two',
     date: '18th Aug 2017',
     content: `
@@ -36,7 +36,7 @@ var articles= {
     </p>`
     },
       
-    articlethree: {
+    'article-three': {
     title:'article-three',
     date: '28th Aug 2017',
     content: `
@@ -98,17 +98,12 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/article-one', function (req, res) {
-    res.send(createtemplate(articles[articleone]));
+app.get('/:articleName', function (req, res) {
+    var articleName= req.params.articleName;
+    res.send(createtemplate(articles[articleName]));
 });
 
-app.get('/article-two', function (req, res) {
-    res.send(createtemplate(articles[articletwo]));
-});
 
-app.get('/article-three', function (req, res) {
-    res.send(createtemplate(articles[articlethree]));
-});
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
 
