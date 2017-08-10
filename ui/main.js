@@ -5,5 +5,8 @@ element.innerHTML= ("New Value");
 
 var img= document.getElementById('madi');
 var marginLeft= 0;
-img.onclick= setinterval (function () {
-    img.style.marginLeft= marginLeft+ '10 px',100});
+img.onclick= function () {
+setInterval (img.style.marginLeft= marginLeft+ '10 px',100);
+};
+
+
