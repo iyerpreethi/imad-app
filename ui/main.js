@@ -16,7 +16,7 @@ var marginLeft = 0;
 var button= document.getElementById("counter");
 button.onclick = function (){
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", 'http://gpreethi.imad.hasura-app.io/counter');
+    xhr.open("GET", 'http://gpreethi.imad.hasura-app.io/counter',true);
     xhr.send();
     xhr.onReadyStateChange= function(){
         if (xhr.readyState=== xhr.DONE && xhr.status=== 200);
