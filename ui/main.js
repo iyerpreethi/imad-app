@@ -12,12 +12,12 @@ var marginLeft = 0;
         } , 100);
     };
     
-var button = 0;
+var counter = 0;
 var button= document.getElementById ('button');
 button.onclick = function (){
-    button= button + 1;
+    counter= buttoncounter + 1;
     var span= document.getElementById ('count');
-    span.innerHTML= button.toString;
+    span.innerHTML= (counter.toString);
 };
 
 
