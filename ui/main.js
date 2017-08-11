@@ -19,11 +19,11 @@ button.onclick = function (){
     xhr.open("GET","http://gpreethi.imad.hasura-app.io/counter",true);
     xhr.send(null);
     xhr.onReadyStateChange= function(){
-        if (xhr.readyState=== XMLHttpRequest.DONE && xhr.status=== 200);
+        if (xhr.readyState=== XMLHttpRequest.DONE && xhr.status=== 200){
         var counter= xhr.responseText;
         var span= document.getElementById("count");
         span.innerHTML= counter.toString();
-    };
+    }};
 };
 
 
