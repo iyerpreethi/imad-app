@@ -24,5 +24,6 @@ body {
 display: block;
 margin: 200;
 padding-top: 100;
-color: #FFC107
+color: #FFC107;
+text-align: center;
 }
