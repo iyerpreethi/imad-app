@@ -1,4 +1,4 @@
-console.log('Loaded!');
+
 
 //var element= document.getElementById("main-text");
 //element.innerHTML= ("New Value");
@@ -22,6 +22,7 @@ button.onclick = function (){
         var counter= xhr.responseText;
         var span= document.getElementById("count");
         span.innerHTML= counter.toString();
+        console.log(xhr.responseText);
         }
     }
   };
