@@ -19,7 +19,7 @@ button.onclick = function (){
     xhr.open("GET", 'http://gpreethi.imad.hasura-app.io/counter',true);
     xhr.send();
     xhr.onReadyStateChange= function(){
-        if (xhr.readyState=== xhr.DONE && xhr.status=== 200);
+        if (xhr.readyState=== XMLHttpRequest.DONE && xhr.status=== 200);
         var counter= xhr.responseText;
     };
     var span= document.getElementById("count");
