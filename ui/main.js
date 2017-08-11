@@ -15,7 +15,13 @@ var marginLeft = 0;
 var counter = 0;
 var button= document.getElementById("counter");
 button.onclick = function (){
-    counter= counter + 1;
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", 'http://gpreethi.imad.hasura-app.io/counter');
+    xhr.send();
+    xhr.onReadyStateChange= function(){
+        if (xhr.readyState=== xhr.DONE && xhr.status=== 200);
+        var counter= xhr.responseText;
+    };
     var span= document.getElementById("count");
     span.innerHTML= counter.toString();
 };
