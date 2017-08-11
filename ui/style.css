@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color: white;
     
 }
 
@@ -24,6 +24,6 @@ body {
 display: block;
 margin: 200;
 padding-top: 100;
-color: #FFC107;
+color: black;
 text-align: center;
 }
