@@ -21,9 +21,10 @@ button.onclick = function (){
     xhr.onReadyStateChange= function(){
         if (xhr.readyState=== XMLHttpRequest.DONE && xhr.status=== 200);
         var counter= xhr.responseText;
+        var span= document.getElementById("count");
+        span.innerHTML= counter.toString();
     };
-    var span= document.getElementById("count");
-    span.innerHTML= counter.toString();
+    
 };
 
 
