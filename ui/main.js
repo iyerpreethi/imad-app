@@ -15,7 +15,7 @@ var marginLeft = 0;
 var counter = 0;
 var button= document.getElementById ('button');
 button.onclick = function (){
-    counter= buttoncounter + 1;
+    counter= counter + 1;
     var span= document.getElementById ('count');
     span.innerHTML= (counter.toString);
 };
