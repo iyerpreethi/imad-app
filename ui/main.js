@@ -13,22 +13,22 @@ var marginLeft = 0;
     };
     
 
-var button= document.getElementById("counter");
-button.onclick = function (){
-  var xhr = new XMLHttpRequest();
-    xhr.onReadyStateChange= function(){
-        if (xhr.readyState=== XMLHttpRequest.DONE) {
-          if (xhr.status=== 200){
-            
-            console.log(xhr.responseText);
-          }
-        }
-    };
-    xhr.open("GET","http://gpreethi.imad.hasura-app.io/counter",true);
-    xhr.send(null);
-};
-
-
-            //var counter= xhr.responseText;
-            //var span= document.getElementById("count");
-            //span.innerHTML= counter.toString();
+function exec(){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() 
+    {
+          if (request.readyState === XMLHttpRequest.DONE) 
+          {
+              //Take Some Action
+              if (request.status === 200) 
+                { 
+                    var counter = request.responseText; 
+                    var span = document.getElementById('count');
+                    span.innerHTML = counter.toString();
+                } 
+          } 
+    }; 
+    request.open("GET", "http://kogam22.imad.hasura-app.io/counter", true);
+    request.send(); 
+    console.log('EXECUTED');
+}
