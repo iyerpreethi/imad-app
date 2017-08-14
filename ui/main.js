@@ -19,7 +19,7 @@ function exec(){
     {
           if (request.readyState === XMLHttpRequest.DONE) 
           {
-              //Take Some Action
+         
               if (request.status === 200) 
                 { 
                     var counter = request.responseText; 
