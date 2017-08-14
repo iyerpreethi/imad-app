@@ -15,17 +15,17 @@ var marginLeft = 0;
 
 var button= document.getElementById("counter");
 button.onclick = function (){
-    var xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
     xhr.onReadyStateChange= function(){
         if (xhr.readyState=== XMLHttpRequest.DONE) {
-        if (xhr.status=== 200){
-        var counter= xhr.responseText;
-        var span= document.getElementById("count");
-        span.innerHTML= counter.toString();
-        console.log(xhr.responseText);
+          if (xhr.status=== 200){
+            var counter= xhr.responseText;
+            var span= document.getElementById("count");
+            span.innerHTML= counter.toString();
+            console.log(xhr.responseText);
+          }
         }
-    }
-  };
-   xhr.open("GET","http://gpreethi.imad.hasura-app.io/counter",true);
-   xhr.send(null);
+    };
+    xhr.open("GET","http://gpreethi.imad.hasura-app.io/counter",true);
+    xhr.send(null);
 };
