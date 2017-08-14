@@ -28,7 +28,7 @@ function exec(){
                 } 
           } 
     }; 
-    request.open("GET", "http://kogam22.imad.hasura-app.io/counter", true);
+    request.open("GET", "http://gpreethi.imad.hasura-app.io/counter", true);
     request.send(); 
     console.log('EXECUTED');
 }
